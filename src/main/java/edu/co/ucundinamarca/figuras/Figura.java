@@ -9,7 +9,7 @@ package edu.co.ucundinamarca.figuras;
  *
  * @author Camilo Preciado
  */
-public abstract class Figura {
+public abstract class Figura implements IFigura{
     double area;
     double perimetro;
 
@@ -18,7 +18,6 @@ public abstract class Figura {
         this.perimetro = perimetro;
     }
     
-    public abstract void datos();
     public abstract void calcularArea();
     public abstract void calcularPerimetro();
     public abstract void imprimirResultados();
