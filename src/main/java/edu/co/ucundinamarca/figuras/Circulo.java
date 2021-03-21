@@ -12,8 +12,9 @@ package edu.co.ucundinamarca.figuras;
 public class Circulo extends Figura{
     double radio;
 
-    public Circulo(String area, String perimetro) {
+    public Circulo(double radio, String area, String perimetro) {
         super(area, perimetro);
+        this.radio = radio;
     }
     
     public void imprimirInformacion(){

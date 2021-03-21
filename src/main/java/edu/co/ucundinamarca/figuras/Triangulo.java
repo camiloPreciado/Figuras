@@ -9,6 +9,25 @@ package edu.co.ucundinamarca.figuras;
  *
  * @author Camilo Preciado
  */
-public class Triangulo {
+public class Triangulo extends Figura{
+
+    public Triangulo(String area, String perimetro) {
+        super(area, perimetro);
+    }
+
+    @Override
+    public void imprimirInformacion() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void calcularArea() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void calcularPerimetro() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
