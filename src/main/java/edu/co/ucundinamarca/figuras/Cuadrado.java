@@ -5,29 +5,62 @@
  */
 package edu.co.ucundinamarca.figuras;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Camilo Preciado
  */
 public class Cuadrado extends Figura{
 
-    public Cuadrado(String area, String perimetro) {
-        super(area, perimetro);
+    private double lado;
+    private Scanner dato = new Scanner (System.in);
+    
+    public Cuadrado() {
+        super(0, 0);
+    }
+
+    public void metodoCuadrado(){
+        System.out.println("Metodo Cuadrado");
     }
 
     @Override
-    public void imprimirInformacion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void imprimirResultados() {
+        System.out.println("El area del cuadrado es: "+area + " el perimetro es: "+perimetro);
     }
-
+    
     @Override
     public void calcularArea() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        area = Math.pow(lado, (2));
     }
 
     @Override
     public void calcularPerimetro() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        perimetro = 4*lado;
+    }
+
+    @Override
+    public void datos() {
+        System.out.println("Ingrese tamaño de un lado: ");
+               lado = dato.nextDouble();
+               calcularArea();
+               calcularPerimetro();
+    }
+
+    public double getLado() {
+        return lado;
+    }
+
+    public void setLado(double lado) {
+        this.lado = lado;
+    }
+
+    public Scanner getDato() {
+        return dato;
+    }
+
+    public void setDato(Scanner dato) {
+        this.dato = dato;
     }
     
 }

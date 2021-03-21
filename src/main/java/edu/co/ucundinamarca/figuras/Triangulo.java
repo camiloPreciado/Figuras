@@ -11,12 +11,14 @@ package edu.co.ucundinamarca.figuras;
  */
 public class Triangulo extends Figura{
 
-    public Triangulo(String area, String perimetro) {
-        super(area, perimetro);
+    public Triangulo() {
+        super(0, 0);
     }
 
+    
+
     @Override
-    public void imprimirInformacion() {
+    public void imprimirResultados() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -27,6 +29,11 @@ public class Triangulo extends Figura{
 
     @Override
     public void calcularPerimetro() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void datos() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

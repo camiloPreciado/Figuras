@@ -5,30 +5,66 @@
  */
 package edu.co.ucundinamarca.figuras;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Camilo Preciado
  */
 public class Circulo extends Figura{
-    double radio;
+    private double radio;
+    final float pi = 3.1416f;
+    private Scanner dato = new Scanner (System.in);
 
-    public Circulo(double radio, String area, String perimetro) {
-        super(area, perimetro);
-        this.radio = radio;
+    /**
+     *
+     */
+    
+    public Circulo(){
+        super(0, 0);
     }
     
-    public void imprimirInformacion(){
-        System.out.println("El area del circulo es es: "+area + "el perimetro es:"+perimetro);
+    public void metodoCirculo(){
+        System.out.println("Metodo Circulo");
     }
 
     @Override
+    public void imprimirResultados() {
+        System.out.println("El area del circulo es: "+area + " el perimetro es: "+perimetro);
+    }
+    
+    @Override
     public void calcularArea() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        area = pi * radio;
     }
 
     @Override
     public void calcularPerimetro() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        perimetro = 2*pi*radio;
+    }
+
+    @Override
+    public void datos() {
+        System.out.println("Ingrese radio: ");
+               radio = dato.nextDouble();
+               calcularArea();
+               calcularPerimetro();
+    }
+
+    public double getRadio() {
+        return radio;
+    }
+
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
+
+    public Scanner getDato() {
+        return dato;
+    }
+
+    public void setDato(Scanner dato) {
+        this.dato = dato;
     }
 
     

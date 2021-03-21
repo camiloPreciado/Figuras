@@ -11,12 +11,16 @@ package edu.co.ucundinamarca.figuras;
  */
 public class Rectangulo extends Figura{
 
-    public Rectangulo(String area, String perimetro) {
-        super(area, perimetro);
+    public Rectangulo() {
+        super(0, 0);
+    }
+
+    public void metodoRectangulo(){
+        System.out.println("El area del Rectangulo es: "+area + " el perimetro es: "+perimetro);
     }
 
     @Override
-    public void imprimirInformacion() {
+    public void imprimirResultados() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -27,6 +31,11 @@ public class Rectangulo extends Figura{
 
     @Override
     public void calcularPerimetro() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void datos() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

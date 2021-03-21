@@ -11,6 +11,23 @@ package edu.co.ucundinamarca.figuras;
  */
 public class Principal {
     public static void main(String[] args) {
+        Circulo circulo = new Circulo();
+        Cuadrado cuadrado = new Cuadrado();
         
+        Figura[] vector = new Figura[2];
+        vector[0] = circulo;
+        vector[1] = cuadrado;
+        for (Figura veh : vector) {
+        Figura f;
+        f = ((Figura) veh);
+            if(veh instanceof Circulo){
+            ((Circulo) veh).metodoCirculo();
+            }else if(veh instanceof Cuadrado){
+            ((Cuadrado) veh).metodoCuadrado();
+            }
+
+        f.datos();
+        f.imprimirResultados();
+        }
     }
 }
