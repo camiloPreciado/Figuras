@@ -10,5 +10,7 @@ package edu.co.ucundinamarca.figuras;
  * @author Camilo Preciado
  */
 public class Principal {
-    
+    public static void main(String[] args) {
+        
+    }
 }
