@@ -9,7 +9,7 @@ package edu.co.ucundinamarca.figuras;
  *
  * @author Camilo Preciado
  * @since 1.0
- * @version 1.0.0
+ * @version 1.3.2
  */
 public abstract class Figura implements IFigura{
     /**

@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Camilo Preciado
  * @since 1.0
- * @version 1.0.0
+ * @version 1.3.2
  */
 public class Circulo extends Figura{
     
