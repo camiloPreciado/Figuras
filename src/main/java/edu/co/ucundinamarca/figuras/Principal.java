@@ -17,16 +17,16 @@ public class Principal {
         Triangulo triangulo = new Triangulo();
         TrianguloI trianguloi = new TrianguloI();
         
-        Figura[] vector = new Figura[5];
-        vector[0] = circulo;
+        Figura[] vector = new Figura[1];
+       /* vector[0] = circulo;
         vector[1] = cuadrado;
         vector[2] = rectangulo;
-        vector[3] = triangulo;
-        vector[4] = trianguloi;
+        vector[3] = triangulo;*/
+        vector[0] = trianguloi;
         for (Figura veh : vector) {
             Figura f;
             f = ((Figura) veh);
-                if(veh instanceof Circulo){
+                /*if(veh instanceof Circulo){
                 ((Circulo) veh).metodoCirculo();
                 }else if(veh instanceof Cuadrado){
                 ((Cuadrado) veh).metodoCuadrado();
@@ -34,7 +34,7 @@ public class Principal {
                 ((Rectangulo) veh).metodoRectangulo();
                 }else if(veh instanceof Triangulo){
                 ((Triangulo) veh).metodoTriangulo();
-                }else if(veh instanceof TrianguloI){
+                }else */if(veh instanceof TrianguloI){
                 ((TrianguloI) veh).metodoTrianguloI();
                 }
             f.datos();

@@ -26,18 +26,18 @@ public class TrianguloI extends Figura{
     }
     
     @Override
+    public void imprimirResultados() {
+        System.out.println("El area del Triangulo Isosceles es: "+getArea() + " el perimetro es: "+getPerimetro());
+    }
+    
+    @Override
     public void calcularArea() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        setArea((ladoB* Math.sqrt(Math.pow(ladoA, (2)) - ((Math.pow( ladoB, (2))/4))))/2);
     }
 
     @Override
     public void calcularPerimetro() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void imprimirResultados() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        setPerimetro(2*ladoA+ladoB);
     }
 
     @Override

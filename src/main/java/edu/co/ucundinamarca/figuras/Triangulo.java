@@ -25,7 +25,6 @@ public class Triangulo extends Figura{
         System.out.println("Metodo Triangulo Equilatero");
     }
     
-
     @Override
     public void imprimirResultados() {
         System.out.println("El area del Triangulo Equilatero es: "+getArea() + " el perimetro es: "+getPerimetro());
@@ -38,8 +37,7 @@ public class Triangulo extends Figura{
 
     @Override
     public void calcularPerimetro() {
-        setPerimetro(3*lado);
-        
+        setPerimetro(3*lado);      
     }
 
     @Override
