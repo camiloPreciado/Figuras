@@ -8,15 +8,28 @@ package edu.co.ucundinamarca.figuras;
 /**
  *
  * @author Camilo Preciado
+ * @since 1.0
+ * @version 1.0.0
  */
 public class Principal {
-    public static void main(String[] args) {
-        Circulo circulo = new Circulo();
-        Cuadrado cuadrado = new Cuadrado();
-        Rectangulo rectangulo = new Rectangulo();
-        Triangulo triangulo = new Triangulo();
-        TrianguloI trianguloi = new TrianguloI();
-        TrianguloR triangulor = new TrianguloR();
+    
+    /**
+     * Costructor encargado de ejecutar el metodo iniciar
+     */
+    public Principal(){
+        iniciar();
+    }
+    
+    /**
+     * Crea los objetos de las clases y los guarda en un vector
+     */
+    public void iniciar() {
+        Figura circulo = new Circulo();
+        Figura cuadrado = new Cuadrado();
+        Figura rectangulo = new Rectangulo();
+        Figura triangulo = new Triangulo();
+        Figura trianguloi = new TrianguloI();
+        Figura triangulor = new TrianguloR();
         
         Figura[] vector = new Figura[6];
         vector[0] = circulo;
@@ -44,5 +57,12 @@ public class Principal {
             f.datos();
             f.imprimirResultados();
         }
+    }
+    
+    /**
+     * Crea un objeto de la clase Principal
+     */
+    public static void main(String[] args) {
+        Principal principal = new Principal();
     }
 }

@@ -8,7 +8,12 @@ package edu.co.ucundinamarca.figuras;
 /**
  *
  * @author Camilo Preciado
+ * @since 1.0
+ * @version 1.0.0
  */
 public interface IFigura {
+    /**
+     * Solicita y guarda los datos
+     */
     public void datos();
 }

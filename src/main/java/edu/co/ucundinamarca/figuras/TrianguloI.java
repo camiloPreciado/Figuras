@@ -10,60 +10,95 @@ import java.util.Scanner;
 /**
  *
  * @author Camilo Preciado
+ * @since 1.0
+ * @version 1.0.0
  */
 public class TrianguloI extends Figura{
-    private double ladoA;
-    private double ladoB;
+    
+    /**
+     * Almacena el tamaño de los lados
+     */
+    private double lados;
+    
+    /**
+     * Almacena el tamaño de la base
+     */
+    private double base;
+    
+    /**
+     * Obtiene los datos por consola
+     */
     private Scanner dato = new Scanner (System.in);
     
+    /**
+     *Constructor de la clase
+     */
     public TrianguloI() {
         super(0, 0);
     }
 
+    /**
+     * Indica el metodo
+     */
     public void metodoTrianguloI(){
         System.out.println("---------------------------------------");
         System.out.println("Metodo Triangulo Isosceles");
     }
     
+    /**
+     * Imprime los datos calculados
+     */
     @Override
     public void imprimirResultados() {
         System.out.println("El area del Triangulo Isosceles es: "+getArea() + " el perimetro es: "+getPerimetro());
     }
     
+    /**
+     * Calcula el area del triangulo isosceles
+     */
     @Override
     public void calcularArea() {
-        setArea((ladoB* Math.sqrt(Math.pow(ladoA, (2)) - ((Math.pow( ladoB, (2))/4))))/2);
+        setArea((base* Math.sqrt(Math.pow(lados, (2)) - ((Math.pow( base, (2))/4))))/2);
     }
 
+    /**
+     * Calcula el perimetro del triangulo isosceles
+     */
     @Override
     public void calcularPerimetro() {
-        setPerimetro(2*ladoA+ladoB);
+        setPerimetro(2*lados+base);
     }
 
+    /**
+     * Solicita los datos por consola
+     */
     @Override
     public void datos() {
         System.out.println("Ingrese tamaño de los lados: ");
-        ladoA = dato.nextDouble();
+        lados = dato.nextDouble();
         System.out.println("Ingrese tamaño de la  base: ");
-        ladoB = dato.nextDouble();
+        base = dato.nextDouble();
         calcularArea();
         calcularPerimetro();
     }
 
-    public double getLadoA() {
-        return ladoA;
+    /**
+     * Metodos set y get de las variables ladoA, ladoB y dato
+     */
+    public double getLados() {
+        return lados;
     }
 
-    public void setLadoA(double ladoA) {
-        this.ladoA = ladoA;
+    public void setLados(double lados) {
+        this.lados = lados;
     }
 
-    public double getLadoB() {
-        return ladoB;
+    public double getbase() {
+        return base;
     }
 
-    public void setLadoB(double ladoB) {
-        this.ladoB = ladoB;
+    public void setbase(double base) {
+        this.base = base;
     }
 
     public Scanner getDato() {

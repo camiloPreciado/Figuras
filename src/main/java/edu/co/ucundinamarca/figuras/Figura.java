@@ -8,20 +8,46 @@ package edu.co.ucundinamarca.figuras;
 /**
  *
  * @author Camilo Preciado
+ * @since 1.0
+ * @version 1.0.0
  */
 public abstract class Figura implements IFigura{
+    /**
+     * Almacena el valor del area Calculado
+     */
     private double area;
+    
+    /**
+     * Almacena el valor del perimetro Calculado
+     */
     private double perimetro;
-
+    
+    /**
+     * Costructor de la clase Figura con parametros
+     */
     public Figura(double area, double perimetro) {
         this.area = area;
         this.perimetro = perimetro;
     }
     
+    /**
+     * Metodo Abstracto que calcula el area de la figura
+     */
     public abstract void calcularArea();
+    
+    /**
+     * Metodo Abstracto que calcula el perimetro de la figura
+     */
     public abstract void calcularPerimetro();
+    
+    /**
+     * Metodo Abstracto que imprime los datos calculados
+     */
     public abstract void imprimirResultados();
-
+    
+    /**
+     * Metodos set y get de las variables area y perimetro
+     */
     public double getArea() {
         return area;
     }
