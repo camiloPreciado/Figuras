@@ -30,25 +30,25 @@ public class Circulo extends Figura{
 
     @Override
     public void imprimirResultados() {
-        System.out.println("El area del circulo es: "+area + " el perimetro es: "+perimetro);
+        System.out.println("El area del circulo es: "+getArea() + " el perimetro es: "+getPerimetro());
     }
     
     @Override
     public void calcularArea() {
-        area = pi * radio;
+        setArea(pi * radio);
     }
 
     @Override
     public void calcularPerimetro() {
-        perimetro = 2*pi*radio;
+        setPerimetro(2*pi*radio);
     }
 
     @Override
     public void datos() {
         System.out.println("Ingrese radio: ");
-               radio = dato.nextDouble();
-               calcularArea();
-               calcularPerimetro();
+        radio = dato.nextDouble();
+        calcularArea();
+        calcularPerimetro();
     }
 
     public double getRadio() {

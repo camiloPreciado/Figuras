@@ -21,30 +21,31 @@ public class Cuadrado extends Figura{
     }
 
     public void metodoCuadrado(){
+        System.out.println("---------------------------------------");
         System.out.println("Metodo Cuadrado");
     }
 
     @Override
     public void imprimirResultados() {
-        System.out.println("El area del cuadrado es: "+area + " el perimetro es: "+perimetro);
+        System.out.println("El area del cuadrado es: "+getArea() + " el perimetro es: "+getPerimetro());
     }
     
     @Override
     public void calcularArea() {
-        area = Math.pow(lado, (2));
+        setArea(Math.pow(lado, (2)));
     }
 
     @Override
     public void calcularPerimetro() {
-        perimetro = 4*lado;
+        setPerimetro(4*lado);
     }
 
     @Override
     public void datos() {
         System.out.println("Ingrese tamaño de un lado: ");
-               lado = dato.nextDouble();
-               calcularArea();
-               calcularPerimetro();
+        lado = dato.nextDouble();
+        calcularArea();
+        calcularPerimetro();
     }
 
     public double getLado() {

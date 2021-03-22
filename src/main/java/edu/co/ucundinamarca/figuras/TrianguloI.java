@@ -11,42 +11,40 @@ import java.util.Scanner;
  *
  * @author Camilo Preciado
  */
-public class Rectangulo extends Figura{
-    
+public class TrianguloI extends Figura{
     private double ladoA;
     private double ladoB;
     private Scanner dato = new Scanner (System.in);
-
-    public Rectangulo() {
+    
+    public TrianguloI() {
         super(0, 0);
     }
 
-    public void metodoRectangulo(){
+    public void metodoTrianguloI(){
         System.out.println("---------------------------------------");
-        System.out.println("Metodo Rectangulo");
+        System.out.println("Metodo Triangulo Isosceles");
     }
-
-    @Override
-    public void imprimirResultados() {
-        System.out.println("El area del Rectangulo es: "+getArea() + " el perimetro es: "+getPerimetro());
-    }
-
+    
     @Override
     public void calcularArea() {
-        setArea(ladoA*ladoB);
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void calcularPerimetro() {
-        setPerimetro(2*ladoA + 2*ladoB);
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void imprimirResultados() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void datos() {
-        System.out.println("Ingrese tamaño del ladoA: ");
+        System.out.println("Ingrese tamaño de los lados: ");
         ladoA = dato.nextDouble();
-        
-        System.out.println("Ingrese tamaño del  ladoB: ");
+        System.out.println("Ingrese tamaño de la  base: ");
         ladoB = dato.nextDouble();
         calcularArea();
         calcularPerimetro();
